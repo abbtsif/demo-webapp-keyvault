@@ -1,7 +1,7 @@
 <?php
 
-$cs_key = getenv('USERNAME');
-$cs_name = getenv('PASSWORD');
+$cs_key = getenv('APP_PASS');
+$cs_name = getenv('APP_USER');
 
 if (substr($cs_key, 0, 20) === '@Microsoft.KeyVault(' or substr($cs_name, 0, 20) === '@Microsoft.KeyVault(')
 {
@@ -23,8 +23,8 @@ if (substr($cs_key, 0, 20) === '@Microsoft.KeyVault(' or substr($cs_name, 0, 20)
 <!-- Umgebungsvariablen anzeigen -->
 <div style="background-color: #f0f0f0; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc;">
     <h4>Umgebungsvariablen:</h4>
-    <p><strong>SECURE_KEY:</strong> <?php echo htmlspecialchars($cs_key); ?></p>
-    <p><strong>SECURE_NAME:</strong> <?php echo htmlspecialchars($cs_name); ?></p>
+    <p><strong>SECURE_PASS:</strong> <?php echo htmlspecialchars($cs_key); ?></p>
+    <p><strong>SECURE_USER:</strong> <?php echo htmlspecialchars($cs_name); ?></p>
 </div>
 <br/>
 </body>
