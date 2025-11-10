@@ -1,7 +1,7 @@
 <?php
 
-$cs_key = getenv('SECURE_KEY');
-$cs_name = getenv('SECURE_NAME');
+$cs_key = getenv('USERNAME');
+$cs_name = getenv('PASSWORD');
 
 if (substr($cs_key, 0, 20) === '@Microsoft.KeyVault(' or substr($cs_name, 0, 20) === '@Microsoft.KeyVault(')
 {
